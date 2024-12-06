@@ -1,0 +1,80 @@
+/* src/components/ProductUpload.css */
+.product-upload {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 1px solid #ddd; /* Light border around the form */
+  }
+  
+  .product-upload h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .product-upload form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .product-upload label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .product-upload input[type="text"],
+  .product-upload input[type="number"],
+  .product-upload input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  .product-upload input[type="text"]:focus,
+  .product-upload input[type="number"]:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle glow effect */
+  }
+  
+  .product-upload button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .product-upload button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .product-upload button:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+  }
+  
+  .product-upload button:disabled {
+    background-color: #c8e6c9; /* Light green when disabled */
+    cursor: not-allowed;
+  }
+  
+  .product-upload input[type="file"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #fff;
+  }
+  
