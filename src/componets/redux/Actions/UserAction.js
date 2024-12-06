@@ -114,7 +114,7 @@ export const current=()=>async(dispatch)=>{
         const config = {
             headers: {authorization: localStorage.getItem('token')}
         }
-        const response=await axios.post("https://backend-v4un.onrender.com/api/user/current",config)
+        const response=await axios.post("https://back-ysmd.onrender.com/api/user/current",config)
         dispatch({
             type:CURRENT_USER,
             payload:response.data

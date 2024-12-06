@@ -6,7 +6,7 @@ import { ADD_PRODUCT,UPDATE_CART, ADD_TO_CART, DELETE_PRODUCT, ERROR_PRODUCT, GE
 export const addProduct = (newProduct) => async (dispatch) => {
     dispatch({ type: LOAD_PRODUCT });
     try {
-        const response = await axios.post("http://localhost:5000/api/products/add", newProduct);
+        const response = await axios.post("https://back-ysmd.onrender.com/api/products/add", newProduct);
         dispatch({
             type: ADD_PRODUCT,
             payload: response.data,
@@ -24,7 +24,7 @@ export const addProduct = (newProduct) => async (dispatch) => {
 export const updateProduct=(id,newPrice)=>async(dispatch)=>{
     dispatch({type:LOAD_PRODUCT});
     try{
-        const response = await axios.put(`http://localhost:5000/api/products/edit/${id}`);
+        const response = await axios.put(`https://back-ysmd.onrender.com/api/products/edit/${id}`);
         dispatch({
             type:UPDATE_PRODUCT,
             payload:response.data
@@ -40,7 +40,7 @@ export const updateProduct=(id,newPrice)=>async(dispatch)=>{
 export const deleteProduct=(id)=>async(dispatch)=>{
     dispatch({type:LOAD_PRODUCT});
     try{
-        const response = await axios.delete(`http://localhost:5000/api/products/delete/${id}`);
+        const response = await axios.delete(`https://back-ysmd.onrender.com/api/products/delete/${id}`);
         dispatch({
             type:DELETE_PRODUCT,
             payload:response.data
@@ -57,7 +57,7 @@ export const deleteProduct=(id)=>async(dispatch)=>{
 export const getProductById=(id)=>async(dispatch)=>{
     dispatch({type:LOAD_PRODUCT});
     try{
-         const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+         const response = await axios.get(`https://back-ysmd.onrender.com/api/products/${id}`);
          dispatch({
              type:GET_PRODUCT_BY_ID,
             payload:response.data
@@ -73,7 +73,7 @@ export const getProductById=(id)=>async(dispatch)=>{
 export const getProducts=(id)=>async(dispatch)=>{
     dispatch({type:LOAD_PRODUCT});
     try{
-        const response = await axios.get("http://localhost:5000/api/products/all");
+        const response = await axios.get("https://back-ysmd.onrender.com/api/products/all");
         dispatch({
             type:GET_PRODUCTS,
             payload:response.data
